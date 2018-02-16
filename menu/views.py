@@ -30,15 +30,17 @@ def cupcake_new(request):
 	context = {'form':form}
 	return render(request,"menu/cupcake_new.html",context)
 	
-def cupcake_orderby_price(request):
-	#if lowest_first:
-	#	cakes = Cupcake.objects.all().order_by('price')
-	#else:
-	#	cakes = Cupcake.objects.all().order_by('-price')
-	unsorted_cakes = {}
-	cake_objects = Cupcake.objects.all()
-	for i in cake_objects:
-		unsorted_cakes[i] = float(i.get_price())
-	sorted_cakes = [k for k in sorted(unsorted_cakes, key=unsorted_cakes.get, reverse=True)] # Expensive first
-	context = {"cakes": sorted_cakes}
+def cupcake_orderby_price_descending(request):
+	cakes = Cupcake.objects.all().order_by('-price')
+	context = {"cakes": cakes}
+	return render(request,"menu/price.html", context)
+	
+def cupcake_orderby_price_ascending(request):
+	cakes = Cupcake.objects.all().order_by('price')
+	context = {"cakes": cakes}
+	return render(request,"menu/price.html", context)
+	
+def cupcake_orderby_rating(request):
+	cakes = Cupcake.objects.all().order_by('-rating')
+	context = {"cakes": cakes}
 	return render(request,"menu/price.html", context)

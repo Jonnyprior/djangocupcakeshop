@@ -33,8 +33,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="{% url 'menu:cupcake_orderby_price' %}">Highest</a></li>
-              <li><a href="{% url 'menu:cupcake_orderby_price' %}">Lowest</a></li>
+              <li><a href="{% url 'menu:cupcake_orderby_price_descending' %}">Highest</a></li>
+              <li><a href="{% url 'menu:cupcake_orderby_price_ascending' %}">Lowest</a></li>
+			  <li><a href="{% url 'menu:cupcake_orderby_rating' %}">Rating</a></li>
             </ul>
           </li>
         </ul>
