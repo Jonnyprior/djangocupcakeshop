@@ -44,3 +44,6 @@ def cupcake_orderby_rating(request):
 	cakes = Cupcake.objects.all().order_by('-rating')
 	context = {"cakes": cakes}
 	return render(request,"menu/price.html", context)
+	
+def minty_testpage(request):
+	return render(request,"menu/minty_test.html")

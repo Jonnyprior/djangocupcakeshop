@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<!--<link rel="stylesheet" href="{% static 'menu/css/mintybootstrap.min.css' %}">-->
 <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
 </head>
 <body>
@@ -36,6 +37,7 @@
               <li><a href="{% url 'menu:cupcake_orderby_price_descending' %}">Highest</a></li>
               <li><a href="{% url 'menu:cupcake_orderby_price_ascending' %}">Lowest</a></li>
 			  <li><a href="{% url 'menu:cupcake_orderby_rating' %}">Rating</a></li>
+			  <li><a href="{% url 'menu:minty_testpage' %}">Testpage</a></li>
             </ul>
           </li>
         </ul>
